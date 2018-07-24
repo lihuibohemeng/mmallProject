@@ -10,11 +10,11 @@
         </filter>
     </appender>
 
-    <appender name="mmall" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    <appender name="mmallshop" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <File>g:/mmalllog/mmall.log</File>
         <!--<File>/developer/apache-tomcat-7.0.73/logs/mmall.log</File>-->
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>g:/mmalllog/mmall.log.%d{yyyy-MM-dd}.gz</fileNamePattern>
+            <fileNamePattern>g:/mmalllog/mmallshop.log.%d{yyyy-MM-dd}.gz</fileNamePattern>
             <append>true</append>
             <maxHistory>10</maxHistory>
         </rollingPolicy>
@@ -43,8 +43,8 @@
         </filter>
     </appender>
 
-    <logger name="com.mmall" additivity="false" level="INFO" >
-        <appender-ref ref="mmall" />
+    <logger name="com.mmallshop" additivity="false" level="INFO" >
+        <appender-ref ref="mmallshop" />
         <appender-ref ref="console"/>
     </logger>
 

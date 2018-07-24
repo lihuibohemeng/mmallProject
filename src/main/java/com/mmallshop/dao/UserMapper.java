@@ -20,6 +20,8 @@ public interface UserMapper {
 
     int checkEmail(String email);
 
+    int checkPassword(@Param("password") String password,@Param("id") int id);
+
     String selectQuestion(String userName);
 
     int updatePasswordByUsername(@Param("username") String userName,@Param("password") String password);
@@ -27,4 +29,6 @@ public interface UserMapper {
     User selectLogin(@Param("username") String userName, @Param("password")String password);
 
     int checkAnswer(@Param("username")String userName,@Param("answer")String answer,@Param("question")String question);
+
+    int checkEmailByUserId(@Param(value = "email") String email, @Param(value = "userId") Integer userId);
 }

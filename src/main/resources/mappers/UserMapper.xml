@@ -187,4 +187,18 @@
     set password = #{password}
     where username = #{username}
   </update>
+
+  <select id="checkPassword" resultType="int" parameterType="map">
+    select count(1)
+    from mmall_user
+    where id = #{id}
+    and password = #{password}
+  </select>
+
+  <!--COUNT(*) 函数返回在给定的选择中被选的行数。-->
+  <select id="checkEmailByUserId" resultType="int" parameterType="map">
+    select count(1) from mmall_user
+    where email = #{email}
+    and id != #{userId}
+  </select>
 </mapper>
