@@ -7,9 +7,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Properties;
 
-/**
- * Created by geely
- */
+
 @Slf4j
 public class PropertiesUtil {
 
